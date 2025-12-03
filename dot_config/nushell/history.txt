@@ -1,0 +1,95 @@
+quit
+exit
+config nu
+$env.config.buffer_editor = "nvim"
+config nu
+config nu --doc | nu-highlight | bat
+config nu --doc | nu-highlight | less -r
+config nu --doc | nu-highlight | less -R\
+config nu --doc | nu-highlight | less -R
+ls
+ls | sort-by size
+ls | sort-by size | reverse
+ls | where name ilike '%oc%'
+ls | where name = '%oc%'
+ls | where name == '%oc%'
+ls | where name ~= '%oc%'
+ls | get name
+ls | get name | firtst
+ls | get name | first
+ls | select name
+"12" | into int
+[1,2,3] | each { echo }
+[1,2,3] | each { |a| echo $a }
+ls | where name starts-with "E"
+ls | where name starts-with "D"
+uv
+uv list
+uv python
+uv python list
+uv python list | ls
+uv python list | table
+uv python list | to-table
+uv python list | table
+uv python list | list
+uv python list | to-list
+uv python list | as list
+uv python list | to list
+uv python list | type
+uv python list | type | echo
+uv python list | get
+uv python list | get name
+uv python list | describe
+uv python list | split "\n"
+uv python list | split
+uv python list | split row
+uv python list | split row "\n"
+uv python list | split row "\n" | split
+uv python list | split column "\t"
+uv python list | split column 
+uv python list | split column " "
+uv python list | split column "\t"
+uv python list | split column "\s"
+uv python list | split column "\\s"
+uv python list | split column "<"
+uv python list | split column " *"
+uv python list | split column " "
+uv python list | split column " " 
+uv python list | split column " " | select column0
+uv python list | split row "\n"
+uv python list | split row "\n" | foreach { |row| row | split column " " | get column0 }
+uv python list | split row "\n" | for-each { |row| row | split column " " | get column0 }
+uv python list | split row "\n" | each { |row| row | split column " " | get column0 }
+uv python list | split row "\n" | each { |row| $row | split column " " | get column0 }
+uv python list | split row "\n" | each { |row| $row | split column " " | select column0 }
+uv python list | split row "\n" | each { |row| $row | split column " " | get column0 | .0 }
+uv python list | split row "\n" | each { |row| $row | split column " " | get column0.0 }
+config nu
+exec $SHELL
+ls
+ls -a
+cd Projects/
+ls
+cd f1_betting/
+ls
+ls | get size
+ls | select size
+ls | get size.0
+ls | get size.0 | int
+ls | get size.0 | to int
+ls | get size.0 | to --int
+ls | get size.0 | to-int
+ls | get size.0 | into int
+uv python list | into table
+uv python list | into str
+uv python list | into
+uv python list | into record
+uv python list | into value
+uv python list | split row "\n"
+uv python list | split row "\n" | into list
+uv python list | split row "\n" | into
+uv python list | split row "\n" | into --help
+into --help
+uv python list | split row "\n" | into cell-path
+uv python list | into cell-path
+uv python list | [$in]

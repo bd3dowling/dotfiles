@@ -1,0 +1,12 @@
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
+[user]
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOdbc4bsOKh5KlRVMxINMAuECFs7A9zwSGiO9frE46dU
+	name = Ben Dowling
+	email = ben.dowling@icloud.com
+[core]
+	excludesFile = /Users/ben/.config/git/ignore
